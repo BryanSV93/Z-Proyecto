@@ -16,7 +16,5 @@ namespace AppBackend.Services
 
         Task EliminarProducto(int id);
 
-            //de momento buscar productos se hace por medio de id
-
     }
 }

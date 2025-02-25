@@ -1,4 +1,3 @@
-using AppFrontend.Controllers;
 using AppFrontend.Services;
 using System.Net;
 
@@ -6,12 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-// menso builder.Services.AddHttpClient<ProductosController>();
-
-
-//TRABAJANDO------------------
-
 
 builder.Services.AddHttpClient();
 
@@ -28,8 +21,6 @@ builder.Services.AddHttpClient<ProductoService>(client =>
         };
     });
 
-
-//TRABAJANDO------------------
 
 var app = builder.Build();
 

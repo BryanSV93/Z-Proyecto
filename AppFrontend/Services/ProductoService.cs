@@ -22,7 +22,6 @@ namespace AppFrontend.Services
            var productos = await response.Content.ReadFromJsonAsync<List<Producto>>();
             return productos;
         }
-        //TRABAJANDO00000000000000000000000//
 
         public async Task AgregarProducto(Producto producto)
         {
@@ -58,7 +57,6 @@ namespace AppFrontend.Services
         }
 
 
-        //TRABAJANDO00000000000000000000000//
 
         public async Task VenderProducto(int id)
         {
@@ -71,8 +69,6 @@ namespace AppFrontend.Services
                 var errorMessage = await response.Content.ReadAsStringAsync();
                 throw new Exception($"Error al vender producto: {errorMessage}");
             }
-
-            Console.WriteLine($"Producto con ID {id} vendido exitosamente.");
         }
 
 

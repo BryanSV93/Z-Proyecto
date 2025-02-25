@@ -3,10 +3,6 @@ using AppBackend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
 
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace AppBackend.Services
 {
     public class ProductoService : IInterfaceProductoService
@@ -83,7 +79,6 @@ namespace AppBackend.Services
                 idParam, nombreParam, precioParam, descripcionParam, stockParam
             );
         }
-        //TRABAJANDOOOOOOOOOOOOO//
 
         public async Task EliminarProducto(int id)
         {
@@ -91,10 +86,6 @@ namespace AppBackend.Services
 
             await _context.Database.ExecuteSqlRawAsync("EXEC EliminarProducto @Id", idParam);
         }
-
-
-
-        //TRABAJANDOOOOOOOOOOOOO//
 
     }
 }

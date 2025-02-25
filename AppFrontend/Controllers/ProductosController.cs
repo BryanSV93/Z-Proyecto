@@ -27,7 +27,6 @@ namespace AppFrontend.Controllers
             var productos = await _productoService.ListarProductos();
             return View("ListaProductos",productos);
         }
-        //TRABAJANDO00000000000000000000000//
 
 
         [HttpGet]
@@ -138,7 +137,7 @@ namespace AppFrontend.Controllers
 
             catch (Exception ex)
             {
-                TempData["ErrorMessage"] = "Error inesperado al procesar al intentar editar el producto.";
+                TempData["ErrorMessage"] = "Error inesperado al intentar eliminar el producto.";
                 return RedirectToAction("ListarProductos");
             }
         }
